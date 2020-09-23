@@ -1,2 +1,8 @@
    Weather app
 
+
+
+ https://pro.openweathermap.org/data/2.5/forecast/climate?q=London&appid={YOUR API KEY}
+
+ https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,daily&appid={API key}
+
