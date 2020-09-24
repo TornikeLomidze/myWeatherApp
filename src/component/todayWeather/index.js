@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import { key, City, Country } from "../../config";
+
 function TodayWeather() {
-    const key = "46439992e5ac096548129dc64880f293";
-    const City = "Tbilisi";
-    const Country = "Georgia";
 
     const [weatherData, setWeatherData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -13,7 +12,7 @@ function TodayWeather() {
 
     const weatherAPI = () => {
         axios
-            .get(`https://api.openweathermap.org/data/2.5/weather?q=${City},${Country}&APPID=${key}&units=metric`)
+            .get(`https://api.openweathermap.org/data/2.5/weather?q=${City.City},${Country.Country}&APPID=${key.key}&units=metric`)
             .then((data) => {
                 console.log(data);
 

@@ -2,18 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
-function MonthDaysWeather() {
-    const key = "46439992e5ac096548129dc64880f293";
-    const Lon = "44.83";
-    const Lat = "41.69";
-    const Part = "current"; /* hourly / daily / minutely / alerts */
+import { key, Lat, Lon, Part } from "../../config";
 
+
+
+function MonthDaysWeather() {
+
+    console.log({ key, Lat, Lon, Part });
     const [weatherData, setWeatherData] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     
     const weatherAPI = () => {
         axios
-            .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${Lat}&lon=${Lon}&exclude=${Part}&appid=${key}`)
+            .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${Lat.Lat}&lon=${Lon.Lon}&exclude=${Part.Part}&appid=${key.key}`)
             .then((data) => {
                 console.log("Month ", data);
 
