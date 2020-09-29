@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import TodayWeather from "./component/todayWeather";
-import MonthDaysWeather from "./component/monthDaysWeather";
+import Today from "./component/today/today";
+import Week from "./component/week/week";
 
 function App() {
   return (
     <div className="App">
 
-      <TodayWeather/>
-      <MonthDaysWeather/>
+      <Today/>
+      <Week/>
     </div>
   );
 }

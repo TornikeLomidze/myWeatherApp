@@ -1,0 +1,41 @@
+
+.todayItem {
+  width: 20%;
+  min-height: 180px;
+  border-radius: 3%;
+  margin: .5%;
+  padding: .7em;
+  background-image: linear-gradient(rgba(220,155,255,0.3), rgba(20,55,25,0.3));
+  box-shadow: 0 0 12px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.__description {
+    margin: 1em;
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+  }
+  &.__temp {
+    margin: .5em 1em;
+    position: relative;
+    font-family: 'Archivo Narrow', sans-serif;
+  }
+  &.__title {
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+  }
+  &.__celsusIcon {
+    font-size: 14px;
+    color: #fff;
+    top: 0px;
+    right: -10px;
+    position: absolute;  
+  }
+  &.__abrev {
+    font-size: 14px;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+  }
+    
+}

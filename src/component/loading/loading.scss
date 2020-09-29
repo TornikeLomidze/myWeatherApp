@@ -1,0 +1,17 @@
+.spiner{
+    position: relative;
+    font-size: 2em;
+    z-index: 3;
+    animation: circleAnim 1s infinite;
+    animation-delay: 0;
+}
+/* animation css  */
+@keyframes circleAnim {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+  
