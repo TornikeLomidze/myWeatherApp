@@ -1,0 +1,54 @@
+/* project variables */
+
+/* << font family variables >> */
+$Raleway: 'Raleway', sans-serif;
+$ArchivoNarrow: 'Archivo Narrow', sans-serif;
+
+
+/* << style variables >> */
+$app-backgrounColor: #282c34;
+$app-height: 100vh;
+$app-fontSize: calc(10px + 2vmin);
+$app-color: white;
+  
+$week-contentPadding: 3em 0;
+  
+$weatherRow-width: 90%;
+$weatherRow-height: 180px;
+
+$countryCod-fontSize: 14px;
+$countryCod-color: black;
+$countryCod-fontFamily: $Raleway;
+
+
+
+
+/* << mixin variables >> */
+$card-width: 20%;
+$card-height: 180px;
+$card-borderRadius: 3%;
+$card-margin: .5%;
+$card-padding: .7em;
+$card-background: linear-gradient(rgba(220,155,255,0.3), rgba(20,55,25,0.3)); 
+$card-shadow: 0 0 12px black;
+
+$description-margin: 1em;
+$description-fontSize: 18px;
+$description-fontFamily: $Raleway;
+
+$temp-margin: .5em 1em;
+$temp-position: relative;
+$temp-fontFamily: $ArchivoNarrow;
+
+$title-fontSize: 1.2em;
+$title-fontFamily: $Raleway;
+
+$icon-fontSize: 24px;
+$icon-color: #fff;
+$icon-top: 3px;
+$icon-right: -16px;
+$icon-position: absolute;
+
+/* << loading style variables >> */
+$loading-fontSize: 2em;
+$loading-zIntex: 3;

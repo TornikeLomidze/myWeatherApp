@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+@mixin cardItem {
+    width: $card-width;
+    min-height: $card-height;
+    border-radius: $card-borderRadius;
+    margin: $card-margin;
+    padding: $card-padding;
+    background-image: $card-background;
+    box-shadow: $card-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin cardDescription {
+    margin: $description-margin;
+    font-size: $description-fontSize;
+    font-family: $description-fontFamily;
+}
+@mixin cardTemp {
+    margin: $temp-margin;
+    position: $temp-position;
+    font-family: $temp-fontFamily;
+}
+@mixin cardTitle {
+    font-size: $title-fontSize;
+    font-family: $title-fontFamily;
+}
+@mixin cardCelsusIcon {
+    font-size: $icon-fontSize;
+    color: $icon-color;
+    top: $icon-top;
+    right: $icon-right;
+    position: $icon-position;     
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './style/App.scss';
 import Today from "./component/today/today";
 import Week from "./component/week/week";
 

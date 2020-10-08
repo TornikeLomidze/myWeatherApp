@@ -10,18 +10,19 @@ function TodayWeather() {
     const [iconID, setIconID] = useState(null);
 
     let newData;
-
     const getTodayWeatherAPI = () => {
+        setIsLoading(true);
         axios
             .get(`https://api.openweathermap.org/data/2.5/weather?q=${City},${Country}&APPID=${key}&units=metric`)
             .then(data => {
-                setIsLoading(false);
+                
                 newData = data.data;
                 setWeatherData(newData);
                 setIconID(newData.weather[0].icon);
+                
             })
             .catch((e) => console.log(e))
-            .finally(() => setIsLoading(true));
+            .finally(() => setIsLoading(false));
     };
 
     useEffect(() => {
@@ -32,7 +33,7 @@ function TodayWeather() {
     
     return (
         <div className="weather_row">
-            {isLoading ? 
+            {!isLoading && weatherData ? 
                 <TodayItem 
                     todayIcon={todayIcon} 
                     todayDescription={weatherData.weather[0].description} 

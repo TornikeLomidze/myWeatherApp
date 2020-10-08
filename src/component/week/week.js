@@ -12,15 +12,15 @@ function Week() {
     let newData;
 
     const getWeekWeatherAPI = () => {
+        setIsLoading(true);
         axios
             .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${Lat}&lon=${Lon}&exclude=${Part}&appid=${key}`)
-            .then((data) => {
-                setIsLoading(false);
+            .then((data, index) => {
                 newData = data.data.daily;
                 setWeatherData(newData);
             })
             .catch((e) => console.log(e))
-            .finally(() => setIsLoading(true));
+            .finally(() => setIsLoading(false));
     };
 
     useEffect(() => {
@@ -28,9 +28,9 @@ function Week() {
     }, []);
 
     return (
-        <div className="weather_row bottom_cont">
-            {isLoading ? weatherData.map(item =>
-                <WeekItem icon={item.weather[0].icon} description={item.weather[0].description} tempDay={item.temp.day} />
+        <div className="weather_row week_cont">
+            {!isLoading ? weatherData.map(item =>
+                <WeekItem icon={item.weather[0].icon} description={item.weather[0].description} tempDay={item.temp.day} key={item.index} />
             ) : <Loading />
             }
         </div >

@@ -1,7 +1,9 @@
+@import '../../style/variables.scss';
+
 .spiner{
     position: relative;
-    font-size: 2em;
-    z-index: 3;
+    font-size: $loading-fontSize;
+    z-index: $loading-zIntex;
     animation: circleAnim 1s infinite;
     animation-delay: 0;
 }

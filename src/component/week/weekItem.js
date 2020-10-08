@@ -1,9 +1,9 @@
 import React from "react";
 import "./weekStyle.scss";
 
-function WeekItem({icon, description, tempDay}) {
+function WeekItem({icon, description, tempDay, key}) {
 
-    return <div className="weekItem" >
+    return <div className="weekItem" key={key}>
         <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} />
         <span className="weekItem__description">
             {description}
