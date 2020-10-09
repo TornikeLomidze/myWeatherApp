@@ -15,7 +15,7 @@ function Week() {
         setIsLoading(true);
         axios
             .get(`https://api.openweathermap.org/data/2.5/onecall?lat=${Lat}&lon=${Lon}&exclude=${Part}&appid=${key}`)
-            .then((data, index) => {
+            .then((data) => {
                 newData = data.data.daily;
                 setWeatherData(newData);
             })
